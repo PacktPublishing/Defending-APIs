@@ -1,2 +1,2 @@
-# Defending-APIs-against-Cyber-Attack
-Defending APIs against Cyber Attack, Published by Packt
+# Defending APIs
+Defending APIs, published by Packt
