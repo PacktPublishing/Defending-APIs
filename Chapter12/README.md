@@ -2,4 +2,31 @@
 
 Code samples for Chapter 12 will be made available here.
 
-
+## Further Reading
+* [https://microservices.io/](https://microservices.io/)
+* [https://www.openlegacy.com/blog/monolithic-application](https://www.openlegacy.com/blog/monolithic-application)
+* [https://falco.org/](https://falco.org/)
+* [https://www.aquasec.com/cloud-native-academy/kubernetes-in-production/kubernetes-security-best-practices-10-steps-to-securing-k8s/](https://www.aquasec.com/cloud-native-academy/kubernetes-in-production/kubernetes-security-best-practices-10-steps-to-securing-k8s/)
+* [https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html)
+* [https://www.practical-devsecops.com/kubernetes-security-best-practices/](https://www.practical-devsecops.com/kubernetes-security-best-practices/)
+* [https://arstechnica.com/information-technology/2018/02/tesla-cloud-resources-are-hacked-to-run-cryptocurrency-mining-malware/](https://arstechnica.com/information-technology/2018/02/tesla-cloud-resources-are-hacked-to-run-cryptocurrency-mining-malware/)
+* [https://blog.kubesimplify.com/four-pillars-of-observability-in-kubernetes](https://blog.kubesimplify.com/four-pillars-of-observability-in-kubernetes)
+* [https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf)
+* [https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf)
+* [https://www.cloudflare.com/en-gb/learning/access-management/what-is-mutual-tls/](https://www.cloudflare.com/en-gb/learning/access-management/what-is-mutual-tls/)
+* [https://approov.io/blog/how-certificate-pinning-helps-thwart-mobile-mitm-attacks](https://approov.io/blog/how-certificate-pinning-helps-thwart-mobile-mitm-attacks)
+* [https://docs.konghq.com/hub/kong-inc/acme/](https://docs.konghq.com/hub/kong-inc/acme/)
+* [https://medium.com/microservices-in-practice/service-mesh-for-microservices-2953109a3c9a](https://medium.com/microservices-in-practice/service-mesh-for-microservices-2953109a3c9a)
+* [https://tetrate.io/blog/mtls-best-practices-for-kubernetes/](https://tetrate.io/blog/mtls-best-practices-for-kubernetes/)
+* [https://curity.io/resources/learn/introduction-identity-and-access-management/](https://curity.io/resources/learn/introduction-identity-and-access-management/)
+* [https://curity.io/resources/learn/the-api-security-maturity-model/](https://curity.io/resources/learn/the-api-security-maturity-model/)
+* [https://www.okta.com/resources/whitepaper/8-ways-to-secure-your-microservices-architecture/](https://www.okta.com/resources/whitepaper/8-ways-to-secure-your-microservices-architecture/)
+* [https://identityserver4.readthedocs.io/en/latest/topics/reference_tokens.html](https://identityserver4.readthedocs.io/en/latest/topics/reference_tokens.html)
+* [https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf)
+* [https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf](https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf)
+* [https://docs.solo.io/gloo-edge/latest/](https://docs.solo.io/gloo-edge/latest/)
+* [https://traefik.io/traefik-hub/](https://traefik.io/traefik-hub/)
+* [https://docs.nginx.com/nginx/](https://docs.nginx.com/nginx/)
+* [https://www.getambassador.io/products/edge-stack/api-gateway](https://www.getambassador.io/products/edge-stack/api-gateway)
+* [https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/](https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/)
+* [https://docs.solo.io/gloo-edge/latest/introduction/architecture/deployment_arch/](https://docs.solo.io/gloo-edge/latest/introduction/architecture/deployment_arch/)
