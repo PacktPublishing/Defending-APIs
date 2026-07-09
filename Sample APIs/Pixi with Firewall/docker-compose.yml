@@ -1,0 +1,52 @@
+version: "3"
+services:
+  fw1:
+    image: 42crunch/apifirewall:v1.0.23
+    container_name: apifirewall-1
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    #   user: ${CURRENT_UID}
+    volumes:
+      # - ./storage/apifirewall/ssl:/opt/guardian/conf/ssl
+      - ./logs:/opt/guardian/logs
+    command:
+      [
+        "/bin/squire",
+        "-platform",
+        "protection.us.42crunch.cloud:8001",
+        "-debug",
+      ]
+    environment:
+      - PROTECTION_TOKEN=c6ae6a3a-1b0c-450f-a166-11b638fef876
+      - LISTEN_PORT=80
+      - TARGET_URL=http://app:8090
+      - LISTEN_NO_TLS=TRUE
+      - LISTEN_SSL_CERT=firewall-cert.pem
+      - LISTEN_SSL_KEY=firewall-key.pem
+      - SERVER_NAME=host.mbm1pro.home
+      - GUARDIAN_NODE_NAME=mbm1pro
+      - GUARDIAN_INSTANCE_NAME=mbm1pro
+      - LOG_DESTINATION=FILES+STDOUT
+      - PRESERVE_HOST=off
+      - RUN_MODE=RESILIENT
+      - GUARDIAN_BLOCKING_LEVEL=5
+      - LOG_LEVEL=trace5
+
+  logsforwarder:
+    image: 42crunch/42c-fw-2la:latest
+    restart: on-failure
+    depends_on:
+    - fw1
+    volumes:
+    - ./logs:/opt/guardian/logs:ro
+    environment:
+    - FW2LA_WORKSPACE_ID=e24dcbc3-7582-40cd-a325-7c8e1167ea0d
+    - FW2LA_WORKSPACE_KEY=UqbzlwTu4yPJjwZi7+OWtVG/K2kwO9ULjwTyfwl1kaj0IpLKhj4m1FsN5aTr3ZigS6wvCn4LXAEqJf3FIba+8w==
+    - FW2LA_LOGS_FOLDER=/opt/guardian/logs
+    - FW2LA_TICK_INTERVAL=10
+
+networks:
+  default:
+    external:
+      name: pixi_default
