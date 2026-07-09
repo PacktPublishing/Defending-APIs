@@ -1,7 +1,5 @@
 # Chapter Nine
 
-Code samples for Chapter 9 will be made available here.
-
 ## Further Reading
 * [https://42crunch.com/7-ways-to-avoid-jwt-pitfalls/](https://42crunch.com/7-ways-to-avoid-jwt-pitfalls/)
 * [https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/](https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/)
