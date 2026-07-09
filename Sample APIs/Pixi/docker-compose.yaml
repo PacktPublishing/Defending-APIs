@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  db:
+    image: 42crunch/pixi:mongo
+    command: mongod --quiet
+    container_name: pixidb
+    ports:
+      - "27017:27017"
+      - "28017:28017"
+
+  app:
+    image: 42crunch/pixi:v4.7
+    ports:
+      - "8090:8090"
+    expose:
+      - 8090

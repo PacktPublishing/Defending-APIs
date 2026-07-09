@@ -1,0 +1,4 @@
+p, alice, /items/*, (GET)|(DELETE)|(POST)
+p, alice, /items, (GET)
+p, johndoe, /items/*, (GET)|(POST)
+p, johndoe, /items, (GET)
