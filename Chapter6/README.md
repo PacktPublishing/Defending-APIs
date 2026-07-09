@@ -1,7 +1,5 @@
 # Chapter Six
 
-Code samples for Chapter 6 will be made available here.
-
 ## Further Reading
 * [https://nordicapis.com/13-api-directories-to-help-you-discover-apis/](https://nordicapis.com/13-api-directories-to-help-you-discover-apis/)
 * [https://www.googleguide.com/advanced_operators_reference.html](https://www.googleguide.com/advanced_operators_reference.html)
