@@ -1,7 +1,5 @@
 # Chapter Five
 
-Code samples for Chapter 5 will be made available here.
-
 ## Further Reading
 * [https://github.com/arainho/awesome-api-security](https://github.com/arainho/awesome-api-security)
 * [https://github.com/snoopysecurity/awesome-burp-extensions](https://github.com/snoopysecurity/awesome-burp-extensions)
