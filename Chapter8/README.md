@@ -1,7 +1,5 @@
 # Chapter Eight
 
-Code samples for Chapter 8 will be made available here.
-
 ## Further Reading
 * [https://owasp.org/www-community/Threat_Modeling_Process](https://owasp.org/www-community/Threat_Modeling_Process)
 * [https://shostack.org/](https://shostack.org/)
