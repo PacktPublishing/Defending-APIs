@@ -1,7 +1,5 @@
 # Chapter Two
 
-Code samples for Chapter 2 will be made available here.
-
 ## Further Reading
 * [https://developers.google.com/oauthplayground/](https://developers.google.com/oauthplayground/)
 * [https://www.oauth.com/playground/](https://www.oauth.com/playground/)
