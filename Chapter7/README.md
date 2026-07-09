@@ -1,7 +1,5 @@
 # Chapter Seven
 
-Code samples for Chapter 7 will be made available here.
-
 ## Further Reading
 * [https://portswigger.net/web-security/authentication/password-based](https://portswigger.net/web-security/authentication/password-based)
 * [https://github.com/0xZDH/burp-password-spray](https://github.com/0xZDH/burp-password-spray)
