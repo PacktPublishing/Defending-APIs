@@ -1,7 +1,5 @@
 # Chapter Thirteen
 
-Code samples for Chapter 13 will be made available here.
-
 ## Further Reading
 * [https://blogs.mulesoft.com/api-integration/strategy/api-ownership-enterprise/](https://blogs.mulesoft.com/api-integration/strategy/api-ownership-enterprise/)
 * [https://medium.com/apis-and-digital-transformation/without-an-api-product-owner-your-apis-have-a-limited-lifespan-6df98d6ad281](https://medium.com/apis-and-digital-transformation/without-an-api-product-owner-your-apis-have-a-limited-lifespan-6df98d6ad281)
