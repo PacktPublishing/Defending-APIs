@@ -1,7 +1,5 @@
 # Chapter Twelve
 
-Code samples for Chapter 12 will be made available here.
-
 ## Further Reading
 * [https://microservices.io/](https://microservices.io/)
 * [https://www.openlegacy.com/blog/monolithic-application](https://www.openlegacy.com/blog/monolithic-application)
