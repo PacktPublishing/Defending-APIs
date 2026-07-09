@@ -1,7 +1,5 @@
 # Chapter Ten
 
-Code samples for Chapter 10 will be made available here.
-
 ## Further Reading
 * [https://melkornemesis.medium.com/mocks-vs-stubs-choosing-the-right-tool-for-the-job-dbdbc19cf0c5](https://melkornemesis.medium.com/mocks-vs-stubs-choosing-the-right-tool-for-the-job-dbdbc19cf0c5)
 * [https://openapi-generator.tech/](https://openapi-generator.tech/)
