@@ -1,7 +1,5 @@
 # Chapter Eleven
 
-Code samples for Chapter 11 will be made available here.
-
 ## Further Reading
 * [https://snyk.io/blog/tips-for-hardening-container-image-security-strategy/](https://snyk.io/blog/tips-for-hardening-container-image-security-strategy/)
 * [https://www.cisecurity.org/insights/blog/how-to-layer-secure-docker-containers-with-hardened-images](https://www.cisecurity.org/insights/blog/how-to-layer-secure-docker-containers-with-hardened-images)
