@@ -1,7 +1,5 @@
 # Chapter Three
 
-Code samples for Chapter 3 will be made available here.
-
 ## Further Reading
 * [https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html](https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html)](https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html](https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html))
 * [https://Owasp.org/www-project-api-security/](https://Owasp.org/www-project-api-security/)](https://Owasp.org/www-project-api-security/](https://Owasp.org/www-project-api-security/))
