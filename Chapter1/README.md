@@ -1,7 +1,5 @@
 # Chapter One
 
-Code samples for Chapter 1 will be made available here.
-
 ## Further Reading
 * [https://marker.medium.com/the-api-economy-in-finance-payoffs-of-getting-connected-c5c6aeb34c57](https://marker.medium.com/the-api-economy-in-finance-payoffs-of-getting-connected-c5c6aeb34c57)
 * [https://www.forbes.com/sites/forbestechcouncil/2021/09/10/how-to-succeed-in-the-api-economy/?sh=a2b84a544b98](https://www.forbes.com/sites/forbestechcouncil/2021/09/10/how-to-succeed-in-the-api-economy/?sh=a2b84a544b98)
