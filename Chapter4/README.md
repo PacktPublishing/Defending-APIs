@@ -1,7 +1,5 @@
 # Chapter Four
 
-Code samples for Chapter 4 will be made available here.
-
 ## Further Reading
 * [https://www.bleepingcomputer.com/news/security/dpd-group-parcel-tracking-flaw-may-have-exposed-customer-data/](https://www.bleepingcomputer.com/news/security/dpd-group-parcel-tracking-flaw-may-have-exposed-customer-data/)
 * [https://techcrunch.com/2022/03/03/cbord-university-digital-locks/](https://techcrunch.com/2022/03/03/cbord-university-digital-locks/)
