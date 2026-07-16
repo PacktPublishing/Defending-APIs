@@ -1,0 +1,16 @@
+# Chapter 11 - DB-less Kong in front of the backend API.
+services:
+  kong:
+    image: kong:3.6
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /kong/kong.yml
+    volumes:
+      - ./kong:/kong
+    ports: ["8000:8000", "8001:8001"]
+  backend:
+    # Build from the repo root using the hardened image from this chapter.
+    build:
+      context: ..
+      dockerfile: Chapter11/hardening/Dockerfile
+    command: uvicorn common.demo_vulnerable_api.app:app --host 0.0.0.0 --port 8000

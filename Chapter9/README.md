@@ -1,6 +1,10 @@
 # Chapter Nine
 
-Code samples for Chapter 9 will be made available here.
+## Code samples
+
+- `secure_api/` — a secure FastAPI reference app: hardened JWT handling, password hashing, object/function-level authorization, safe response/request schemas and rate limiting -- the hardened counterpart to common/demo_vulnerable_api
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://42crunch.com/7-ways-to-avoid-jwt-pitfalls/](https://42crunch.com/7-ways-to-avoid-jwt-pitfalls/)

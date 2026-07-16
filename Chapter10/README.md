@@ -1,6 +1,12 @@
 # Chapter Ten
 
-Code samples for Chapter 10 will be made available here.
+## Code samples
+
+- `petstore.yaml` — a sample OpenAPI contract
+- `generate.sh` — generating a Python FastAPI/Flask server stub with OpenAPI Generator / Swagger Codegen
+- `generated_stub_example.py` — an example of the generated, contract-driven server
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://melkornemesis.medium.com/mocks-vs-stubs-choosing-the-right-tool-for-the-job-dbdbc19cf0c5](https://melkornemesis.medium.com/mocks-vs-stubs-choosing-the-right-tool-for-the-job-dbdbc19cf0c5)

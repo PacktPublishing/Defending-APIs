@@ -1,0 +1,18 @@
+# Chapter 12 - Running secure microservices in practice.
+# In production, terminate mTLS between services at a sidecar/mesh (Istio/Linkerd).
+services:
+  gateway:
+    build:
+      context: ..
+      dockerfile: Chapter11/hardening/Dockerfile
+    command: uvicorn Chapter12.services.gateway_service:app --host 0.0.0.0 --port 12001
+    environment:
+      ORDERS_URL: "http://orders:12002"   # reach the downstream by service DNS name
+    ports: ["12001:12001"]
+    depends_on: [orders]
+  orders:
+    build:
+      context: ..
+      dockerfile: Chapter11/hardening/Dockerfile
+    command: uvicorn Chapter12.services.orders_service:app --host 0.0.0.0 --port 12002
+    # No published ports: only reachable inside the mesh network (east-west).

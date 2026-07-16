@@ -1,0 +1,14 @@
+# Shared dependencies for the Defending APIs code samples.
+# All samples are written for Python 3.10+.
+# Install with:  pip install -r requirements.txt
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.1
+PyJWT==2.8.0
+passlib[bcrypt]==1.7.4
+requests==2.32.3
+python-multipart==0.0.9
+PyYAML==6.0.1
+
+# Dev/test extras (for the pytest suite in tests/):
+#   pip install pytest httpx

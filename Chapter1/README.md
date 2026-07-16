@@ -1,6 +1,11 @@
 # Chapter One
 
-Code samples for Chapter 1 will be made available here.
+## Code samples
+
+- `building_blocks.py` — hashing, HMAC, signatures, encoding and constant-time comparison
+- `data_formats.py` — the same record round-tripped through JSON, YAML and XML
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://marker.medium.com/the-api-economy-in-finance-payoffs-of-getting-connected-c5c6aeb34c57](https://marker.medium.com/the-api-economy-in-finance-payoffs-of-getting-connected-c5c6aeb34c57)

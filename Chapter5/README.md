@@ -1,6 +1,12 @@
 # Chapter Five
 
-Code samples for Chapter 5 will be made available here.
+## Code samples
+
+- `api_client.py` — a requests-based API client (the Python equivalent of the HTTPie/cURL examples)
+- `find_api_keys.py` — a regex scanner for secrets accidentally committed to source
+- `attack_jwt.py` — alg:none forgery and weak-secret brute force
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://github.com/arainho/awesome-api-security](https://github.com/arainho/awesome-api-security)

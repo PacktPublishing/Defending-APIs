@@ -1,6 +1,11 @@
 # Chapter Two
 
-Code samples for Chapter 2 will be made available here.
+## Code samples
+
+- `auth_schemes.py` — Basic, Bearer, API-key and AWS keyed-HMAC Authorization headers
+- `jwt_claims.py` — issuing and verifying a signed JWT with standard claims
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://developers.google.com/oauthplayground/](https://developers.google.com/oauthplayground/)

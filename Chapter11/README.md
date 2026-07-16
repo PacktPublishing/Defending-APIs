@@ -1,6 +1,13 @@
 # Chapter Eleven
 
-Code samples for Chapter 11 will be made available here.
+## Code samples
+
+- `kong/kong.yml` — declarative Kong config: JWT auth, rate limiting, IP restriction and CORS
+- `docker-compose.yml` — Kong in DB-less mode in front of the backend
+- `hardening/Dockerfile` — a minimal, non-root, hardened container image
+- `monitoring_alerting.py` — log-based detection of brute-force and BOLA-style abuse
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://snyk.io/blog/tips-for-hardening-container-image-security-strategy/](https://snyk.io/blog/tips-for-hardening-container-image-security-strategy/)

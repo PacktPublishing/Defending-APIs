@@ -1,6 +1,10 @@
 # Chapter Thirteen
 
-Code samples for Chapter 13 will be made available here.
+## Code samples
+
+- `maturity_assessment.py` — a self-assessment tool against the 42Crunch maturity model dimensions
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://blogs.mulesoft.com/api-integration/strategy/api-ownership-enterprise/](https://blogs.mulesoft.com/api-integration/strategy/api-ownership-enterprise/)

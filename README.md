@@ -42,9 +42,13 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1-13 | Angular 9 | Windows, macOS, or Linux |
-| 1-13 | TypeScript 3.7 | Windows, macOS, or Linux |
-| 1-13 | ECMAScript 11 | Windows, macOS, or Linux |
+| 1-13 | Python 3.10+ | Windows, macOS, or Linux |
+| 5-13 | FastAPI / uvicorn (see requirements.txt) | Windows, macOS, or Linux |
+| 11-12 | Docker & Docker Compose (optional) | Windows, macOS, or Linux |
+| 8, 10 | Semgrep, OpenAPI Generator (optional) | Windows, macOS, or Linux |
+
+> The code samples in this repository are written in Python. Install with
+> `pip install -r requirements.txt`. See `CODE_NOTES.md` for details.
 
 
 ### Related products

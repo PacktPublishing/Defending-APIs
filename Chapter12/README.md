@@ -1,6 +1,12 @@
 # Chapter Twelve
 
-Code samples for Chapter 12 will be made available here.
+## Code samples
+
+- `services/gateway_service.py` — edge authentication with internal token propagation
+- `services/orders_service.py` — a downstream service enforcing east-west scope checks
+- `docker-compose.yml` — the two services wired together, orders unpublished to the outside
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
 ## Further Reading
 * [https://microservices.io/](https://microservices.io/)
