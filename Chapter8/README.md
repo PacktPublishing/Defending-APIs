@@ -1,5 +1,14 @@
 # Chapter Eight
 
+## Code samples
+
+- `openapi.yaml` — a positive-security-model OpenAPI spec with constraints and security schemes
+- `semgrep-rules.yml` — Semgrep rules that catch the JWT flaws from the chapter
+- `validate_positive_model.py` — allow-list request validation derived from the spec
+- `.github/workflows/api-security.yml` (repo root) — a GitHub Actions pipeline running Semgrep, OpenAPI linting and the test suite
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
+
 ## Further Reading
 * [https://owasp.org/www-community/Threat_Modeling_Process](https://owasp.org/www-community/Threat_Modeling_Process)
 * [https://shostack.org/](https://shostack.org/)

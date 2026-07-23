@@ -1,0 +1,3 @@
+# NOTE: The runnable pipeline lives at .github/workflows/api-security.yml so that
+# GitHub Actions actually executes it (workflows only run from .github/workflows/).
+# This file is kept only as an in-chapter reference to where the pipeline is defined.

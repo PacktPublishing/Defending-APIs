@@ -1,5 +1,12 @@
 # Chapter Seven
 
+## Code samples
+
+- `bola_bfla.py` — object- and function-level authorization attacks against the demo API
+- `injection.py` — a catalogue of SQLi/NoSQLi/command/path-traversal/SSRF payloads and a runner
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
+
 ## Further Reading
 * [https://portswigger.net/web-security/authentication/password-based](https://portswigger.net/web-security/authentication/password-based)
 * [https://github.com/0xZDH/burp-password-spray](https://github.com/0xZDH/burp-password-spray)

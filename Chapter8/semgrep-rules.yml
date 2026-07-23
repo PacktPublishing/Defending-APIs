@@ -1,0 +1,18 @@
+# Chapter 8 - Automating API security with Semgrep.
+# Two rules mirroring the JWT flaws discussed in the chapter.
+rules:
+  - id: jwt-decode-without-verification
+    languages: [python]
+    severity: ERROR
+    message: >
+      JWT decoded without signature verification. Never pass
+      verify_signature=False; always supply algorithms=[...] and a key.
+    patterns:
+      - pattern: 'jwt.decode(..., options={..., "verify_signature": False, ...})'
+
+  - id: jwt-alg-none
+    languages: [python]
+    severity: ERROR
+    message: "JWT created with the 'none' algorithm cannot be verified."
+    patterns:
+      - pattern: 'jwt.encode(..., algorithm="none")'

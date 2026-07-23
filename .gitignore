@@ -1,0 +1,20 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local assistant settings (never commit)
+.claude/settings.local.json
+.Codex/settings.local.json
+
+# Local recovery / working notes (never commit)
+RECOVERED_CONTEXT.md
+
+# OS / editor cruft
+.DS_Store

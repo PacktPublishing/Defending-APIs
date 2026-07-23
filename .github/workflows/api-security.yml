@@ -1,0 +1,18 @@
+# Runs Semgrep and OpenAPI linting on every push. (Referenced by Chapter 8.)
+name: api-security
+on: [push, pull_request]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Semgrep
+        run: |
+          pip install semgrep
+          semgrep --config Chapter8/semgrep-rules.yml --error .
+      - name: OpenAPI lint
+        run: npx @redocly/cli lint Chapter8/openapi.yaml
+      - name: Unit tests
+        run: |
+          pip install -r requirements.txt pytest
+          JWT_SECRET=$(python -c "import secrets;print(secrets.token_hex(32))") pytest -q

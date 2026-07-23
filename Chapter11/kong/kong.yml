@@ -1,0 +1,23 @@
+# Chapter 11 - Implementing security patterns in the Kong API gateway.
+# Declarative (DB-less) config mirroring the gateway protections in the chapter:
+# authentication, rate limiting, IP restriction and CORS.
+_format_version: "3.0"
+services:
+  - name: defendingapis
+    url: http://backend:8000
+    routes:
+      - name: info-route
+        paths: ["/defendingapis"]
+    plugins:
+      - name: jwt                 # offload authentication to the gateway
+      - name: rate-limiting
+        config: { minute: 60, policy: local }
+      - name: ip-restriction
+        config:
+          allow: ["0.0.0.0/0"]
+          deny: ["172.18.0.0/24"]   # block the local docker range (chapter example)
+      - name: cors
+        config:
+          origins: ["https://app.example.com"]   # no wildcard
+          methods: ["GET", "POST"]
+          credentials: true

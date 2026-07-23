@@ -1,0 +1,37 @@
+openapi: "3.0.0"
+info:
+  title: Defending APIs Sample
+  version: "1.0.0"
+  license: { name: MIT }
+servers:
+  - url: https://api.example.com/v1
+# A positive security model: define exactly what is allowed.
+paths:
+  /users/{id}:
+    get:
+      operationId: getUser
+      security: [ { bearerAuth: [] } ]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer, minimum: 1, maximum: 1000000 }
+      responses:
+        "200":
+          description: A user
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/User" }
+        "403": { description: Forbidden }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer, bearerFormat: JWT }
+  schemas:
+    User:
+      type: object
+      additionalProperties: false   # reject unexpected fields (mass assignment)
+      required: [id, username]
+      properties:
+        id: { type: integer }
+        username: { type: string, maxLength: 64, pattern: "^[a-zA-Z0-9_]+$" }
+        email: { type: string, format: email }

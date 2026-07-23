@@ -1,5 +1,13 @@
 # Chapter Six
 
+## Code samples
+
+- `enumerate_endpoints.py` — word-list driven active endpoint discovery
+- `passive_discovery.py` — Google/GHDB-style dork query generation
+- `fingerprint.py` — OS/framework fingerprinting from response headers
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
+
 ## Further Reading
 * [https://nordicapis.com/13-api-directories-to-help-you-discover-apis/](https://nordicapis.com/13-api-directories-to-help-you-discover-apis/)
 * [https://www.googleguide.com/advanced_operators_reference.html](https://www.googleguide.com/advanced_operators_reference.html)

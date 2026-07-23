@@ -1,5 +1,11 @@
 # Chapter Four
 
+## Code samples
+
+- `breach_patterns.py` — safe local reproductions of the BOLA and unauthenticated-endpoint patterns behind real breaches
+
+> **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
+
 ## Further Reading
 * [https://www.bleepingcomputer.com/news/security/dpd-group-parcel-tracking-flaw-may-have-exposed-customer-data/](https://www.bleepingcomputer.com/news/security/dpd-group-parcel-tracking-flaw-may-have-exposed-customer-data/)
 * [https://techcrunch.com/2022/03/03/cbord-university-digital-locks/](https://techcrunch.com/2022/03/03/cbord-university-digital-locks/)
