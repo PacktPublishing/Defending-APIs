@@ -48,7 +48,9 @@ With the following software and hardware list you can run all code files present
 | 8, 10 | Semgrep, OpenAPI Generator (optional) | Windows, macOS, or Linux |
 
 > The code samples in this repository are written in Python. Install with
-> `pip install -r requirements.txt`. See `CODE_NOTES.md` for details.
+> `pip install -r requirements.txt`. See [`CODE_NOTES.md`](CODE_NOTES.md) for
+> the layout (vulnerable demo API vs Chapter 9 secure API), how to run both,
+> and how to run the pytest suite.
 
 
 ### Related products
