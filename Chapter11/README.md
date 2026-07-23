@@ -9,6 +9,63 @@
 
 > **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
+## Run without Docker
+
+```bash
+# from the repository root
+python Chapter11/monitoring_alerting.py
+```
+
+You should see brute-force and BOLA-style enumeration alerts from the sample log.
+
+## Run Kong + backend with Docker
+
+Requires Docker Desktop (or another Compose-capable engine). Commands are run
+from the **repository root** because the backend image build context is `..`
+relative to `Chapter11/`.
+
+```bash
+docker compose -f Chapter11/docker-compose.yml up --build
+```
+
+What comes up:
+
+| Service | Host ports | Role |
+|---------|------------|------|
+| `kong` | `8000` (proxy), `8001` (admin) | Gateway in front of the API |
+| `backend` | not published | Demo vulnerable API, only reachable as `backend:8000` on the Compose network |
+
+Try these against the proxy:
+
+```bash
+# Wrong path — Kong has no matching route
+curl -i http://localhost:8000/
+# → 404 no Route matched
+
+# Correct route, no JWT — the jwt plugin rejects the call
+curl -i http://localhost:8000/defendingapis/
+# → 401 Unauthorized
+```
+
+The route path is `/defendingapis` (see `kong/kong.yml`). Hitting `/` is
+supposed to 404.
+
+### What this sample does *not* include
+
+`kong.yml` enables the JWT plugin but does **not** define a Kong consumer or
+JWT credential. So you will see edge enforcement (`401`) without a full
+authenticated happy-path through Kong. Extending the config with a consumer
+and signing key is a useful exercise; it is intentionally left open.
+
+Tear down:
+
+```bash
+docker compose -f Chapter11/docker-compose.yml down
+```
+
+Stop Chapter 11 before starting Chapter 12 if both would need port `8000`, or
+run only one stack at a time.
+
 ## Further Reading
 * [https://snyk.io/blog/tips-for-hardening-container-image-security-strategy/](https://snyk.io/blog/tips-for-hardening-container-image-security-strategy/)
 * [https://www.cisecurity.org/insights/blog/how-to-layer-secure-docker-containers-with-hardened-images](https://www.cisecurity.org/insights/blog/how-to-layer-secure-docker-containers-with-hardened-images)

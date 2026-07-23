@@ -8,6 +8,75 @@
 
 > **Note:** these are compact, illustrative placeholder samples (AI-assisted, author-reviewed) meant as a starting point for the concepts in this chapter, not production code. See the repository root `CODE_NOTES.md`. Install shared dependencies with `pip install -r ../requirements.txt`.
 
+## The idea
+
+1. A caller hits the **gateway** with an external JWT (`EXTERNAL_JWT_SECRET`,
+   audience `edge`).
+2. The gateway verifies that token, then mints a short-lived **internal** JWT
+   (`INTERNAL_JWT_SECRET`, audience `orders`, scope `orders:read`).
+3. The **orders** service only accepts that internal token and checks scope with
+   exact membership (so `orders:reader` does not satisfy `orders:read`).
+
+Orders is not published to the host. Only the gateway is reachable from outside
+the Compose network.
+
+## Run without Docker
+
+The scope checks are covered by the unit tests:
+
+```bash
+# from the repository root
+JWT_SECRET=$(python -c "import secrets;print(secrets.token_hex(32))") \
+  pytest tests/test_units.py -k scope -v
+```
+
+## Run with Docker
+
+Stop the Chapter 11 stack first if it is still using the Docker engine heavily,
+then from the **repository root**:
+
+```bash
+docker compose -f Chapter11/docker-compose.yml down   # if still running
+docker compose -f Chapter12/docker-compose.yml up --build
+```
+
+| Service | Host ports | Role |
+|---------|------------|------|
+| `gateway` | `12001` | Edge auth + token propagation |
+| `orders` | not published | Downstream; east-west only |
+
+Without a token:
+
+```bash
+curl -i http://localhost:12001/orders
+# → 401 authenticate at the edge
+```
+
+With a valid external token (demo secrets match the code defaults):
+
+```bash
+TOKEN=$(python - <<'PY'
+import jwt, time
+print(jwt.encode(
+    {"sub": "1001", "aud": "edge", "exp": time.time() + 60},
+    "external-edge-secret-rotate-me",
+    algorithm="HS256",
+))
+PY
+)
+curl -i http://localhost:12001/orders -H "Authorization: Bearer $TOKEN"
+# → 200 with the orders list
+```
+
+Those default secrets are for local demos only. Override with
+`EXTERNAL_JWT_SECRET` / `INTERNAL_JWT_SECRET` in real use.
+
+Tear down:
+
+```bash
+docker compose -f Chapter12/docker-compose.yml down
+```
+
 ## Further Reading
 * [https://microservices.io/](https://microservices.io/)
 * [https://www.openlegacy.com/blog/monolithic-application](https://www.openlegacy.com/blog/monolithic-application)

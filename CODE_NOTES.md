@@ -6,17 +6,18 @@ They are compact, illustrative samples for the ideas in each chapter. They are a
 starting point for readers to extend and experiment with. They are **not**
 production-ready. The attack and vulnerable samples are intentionally insecure.
 
-> Portions of this sample code were generated with AI assistance and reviewed by
-> the author. Use them for learning only.
+> Portions of this sample code were generated with AI assistance (specifically the test hardnesses and Docker infrastructure) and reviewed by the author, who wrote the API securiry code samples. Use them for learning only.  
 
 ## The big picture
 
 Two FastAPI apps sit at the centre of the runnable samples:
 
-| App | Path | Role |
-|-----|------|------|
-| Demo vulnerable API | `common/demo_vulnerable_api/` | Shared target for attack chapters (5–7). Deliberately broken. |
-| Secure reference API | `Chapter9/secure_api/` | Hardened counterpart. Same kinds of endpoints, fixed. |
+
+| App                  | Path                          | Role                                                          |
+| -------------------- | ----------------------------- | ------------------------------------------------------------- |
+| Demo vulnerable API  | `common/demo_vulnerable_api/` | Shared target for attack chapters (5–7). Deliberately broken. |
+| Secure reference API | `Chapter9/secure_api/`        | Hardened counterpart. Same kinds of endpoints, fixed.         |
+
 
 Chapters 5–7 show attacks against the vulnerable app. Chapter 9 shows how those
 same classes of flaw are closed. Chapters 8 and 10–12 build further defence
@@ -49,7 +50,7 @@ Vulnerable demo (port 8000):
 uvicorn common.demo_vulnerable_api.app:app --reload --port 8000
 ```
 
-Open http://localhost:8000/docs
+Open [http://localhost:8000/docs](http://localhost:8000/docs)
 
 Secure Chapter 9 API (port 9000). It refuses to start without a real secret:
 
@@ -58,7 +59,7 @@ JWT_SECRET=$(python -c "import secrets;print(secrets.token_hex(32))") \
   uvicorn Chapter9.secure_api.app:app --reload --port 9000
 ```
 
-Open http://localhost:9000/docs
+Open [http://localhost:9000/docs](http://localhost:9000/docs)
 
 ## Tests: what they are and how to run them
 
@@ -88,6 +89,8 @@ Chapter 9 app. Same idea for the vulnerable API:
 from common.demo_vulnerable_api.app import app
 ```
 
+
+
 ### "Attack fails" means "test passes"
 
 For the secure API tests, a green result means the *attack did not work*.
@@ -101,11 +104,15 @@ we keep the demo API intentionally broken.
 
 ### Which file tests what
 
-| Test file | Imports / exercises | What a pass means |
-|-----------|---------------------|-------------------|
-| `tests/test_vulnerable_api.py` | `common.demo_vulnerable_api.app` | Known flaws still exploitable |
-| `tests/test_secure_api.py` | `Chapter9.secure_api.app` | Same attack patterns are blocked |
-| `tests/test_units.py` | Chapter 8 positive-model validator; Chapter 12 scope check; Chapter 9 JWT fail-closed | Building-block behaviour is correct |
+
+| Test file                      | Imports / exercises                                                                   | What a pass means                   |
+| ------------------------------ | ------------------------------------------------------------------------------------- | ----------------------------------- |
+| `tests/test_vulnerable_api.py` | `common.demo_vulnerable_api.app`                                                      | Known flaws still exploitable       |
+| `tests/test_secure_api.py`     | `Chapter9.secure_api.app`                                                             | Same attack patterns are blocked    |
+| `tests/test_units.py`          | Chapter 8 positive-model validator; Chapter 12 scope check; Chapter 9 JWT fail-closed | Building-block behaviour is correct |
+
+
+
 
 ### Why `JWT_SECRET` is on the command line
 
@@ -148,6 +155,27 @@ Units (Chapters 8, 9, and 12 building blocks):
 JWT_SECRET=$(python -c "import secrets;print(secrets.token_hex(32))") \
   pytest tests/test_units.py -v
 ```
+
+
+
+## Docker samples (Chapters 11 and 12)
+
+Optional. Needs Docker Compose. Always run the compose files from the
+**repository root** (build context is the repo root).
+
+```bash
+# Chapter 11 — Kong in front of the demo vulnerable API
+docker compose -f Chapter11/docker-compose.yml up --build
+# then: curl -i http://localhost:8000/defendingapis/   → 401 (JWT plugin on)
+# details, limits, and tear-down: Chapter11/README.md
+
+# Chapter 12 — gateway + orders microservices
+docker compose -f Chapter12/docker-compose.yml up --build
+# then: curl -i http://localhost:12001/orders          → 401 without a token
+# details and a signed happy-path example: Chapter12/README.md
+```
+
+Run only one of these stacks at a time if ports or CPU contend on your machine.
 
 ## Safety / ethics
 
